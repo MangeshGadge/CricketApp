@@ -559,7 +559,7 @@ function filterTeams(e) {
 function redirect(e) {
   // let l = location.href.split("");
   // l.splice(22);
-  // const item = e.target;
+  const item = e.target;
   const id = item.parentElement.parentElement.getAttribute("team-id");
   // let l2 = l.join("") + "team_details.html" + "?teamId=" + id;
   let l2 = location.href + "/team_details.html" +"?teamId=" + id;
