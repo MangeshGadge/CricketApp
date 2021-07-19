@@ -96,8 +96,7 @@ function redirect(e) {
    const item = e.target;
   const id = item.parentElement.parentElement.getAttribute("player-id");
   // let l2 = l.join("") + "player_details.html" + "?playerId=" + id;
-  const t = location.href.splice(l)
-  let l2 =  t + "/player_details.html" + "?playerId=" + id;
+  let l2 =  location.href.substring(0,l) + "/player_details.html" + "?playerId=" + id;
   location.href = l2;
 }
 
