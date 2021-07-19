@@ -91,11 +91,13 @@ const card = document.querySelectorAll(".player");
 card.forEach((c) => c.addEventListener("click", redirect));
 
 function redirect(e) {
-  let l = location.href.split("");
-  l.splice(22);
-  const item = e.target;
+  let l = location.href.indexOf("/");
+  // l.splice(22);
+   const item = e.target;
   const id = item.parentElement.parentElement.getAttribute("player-id");
-  let l2 = l.join("") + "player_details.html" + "?playerId=" + id;
+  // let l2 = l.join("") + "player_details.html" + "?playerId=" + id;
+  location.href.splice(l)
+  let l2 =  location.href+ "/player_details.html" + "?playerId=" + id;
   location.href = l2;
 }
 
